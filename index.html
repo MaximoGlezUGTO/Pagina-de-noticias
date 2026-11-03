@@ -1,0 +1,1007 @@
+<!-- ****************************************************************************************************
+MINI-MANUAL: ASÍ SE EDITA ESTA PÁGINA EN 3 PASOS
+1) Busca los emojis verdes 🟢: ahí están las zonas seguras para editar.
+2) Cambia SOLO el texto normal. No borres ni alteres etiquetas como < >, ni comillas "".
+3) Guarda con Ctrl+S y recarga el navegador para ver tus cambios.
+***************************************************************************************************** -->
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+  <!-- 🛑 ZONA DE SISTEMA (CSS/JS) - NO TOCAR O LA PÁGINA SE ROMPERÁ 🛑 -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ✏️ CAMBIA EL TITULAR/TEXTO EN LA SIGUIENTE LÍNEA -->
+    <title>Diario Horizonte | Noticias del Perú y el mundo</title>
+    <!-- ✏️ CAMBIA EL TITULAR/TEXTO EN LA SIGUIENTE LÍNEA -->
+    <meta
+      name="description"
+      content="Cobertura en tiempo real sobre política, economía, regiones y cultura con enfoque latino y periodismo claro."
+    />
+
+    <!-- ✏️ CAMBIA EL TITULAR/TEXTO EN LA SIGUIENTE LÍNEA -->
+    <meta property="og:title" content="Diario Horizonte | Portada de hoy" />
+    <!-- ✏️ CAMBIA EL TITULAR/TEXTO EN LA SIGUIENTE LÍNEA -->
+    <meta
+      property="og:description"
+      content="Reformas clave, alertas económicas y reportajes de fondo para entender la agenda del día."
+    />
+    <!-- 🖼️ PEGA EL ENLACE DE TU FOTO DENTRO DE LAS COMILLAS DEL src="" -->
+    <meta
+      property="og:image"
+      content="https://dummyimage.com/1200x630/ccd5df/1a1f24.jpg&text=Portada+Diario+Horizonte"
+    />
+    <!-- 🔗 PEGA LA DIRECCIÓN DEL ENLACE DENTRO DE LAS COMILLAS DEL href="" -->
+    <meta property="og:url" content="https://maximoglezugto.github.io/Pagina-de-noticias/" />
+    <meta property="og:type" content="website" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- 🛑 ZONA DE SISTEMA (CSS/JS) - NO TOCAR O LA PÁGINA SE ROMPERÁ 🛑 -->
+    <style>
+      :root {
+        --font-body: "Inter", system-ui, -apple-system, sans-serif;
+        --font-title: "Merriweather", Georgia, serif;
+        --bg: #f6f7f9; /* 🎨 Cambia el color hexadecimal aquí */
+        --surface: #ffffff; /* 🎨 Cambia el color hexadecimal aquí */
+        --text: #1a1f24; /* 🎨 Cambia el color hexadecimal aquí */
+        --muted: #5f6b77; /* 🎨 Cambia el color hexadecimal aquí */
+        --line: #d9dee5; /* 🎨 Cambia el color hexadecimal aquí */
+        --accent: #0f62fe; /* 🎨 Cambia el color hexadecimal aquí */
+        --accent-soft: #e8f0ff; /* 🎨 Cambia el color hexadecimal aquí */
+        --danger: #d7263d; /* 🎨 Cambia el color hexadecimal aquí */
+        --warning: #d98b00; /* 🎨 Cambia el color hexadecimal aquí */
+        --shadow: 0 10px 30px rgba(24, 35, 52, 0.08);
+      }
+
+      html[data-theme="dark"] {
+        --bg: #13171b; /* 🎨 Cambia el color hexadecimal aquí */
+        --surface: #1c2229; /* 🎨 Cambia el color hexadecimal aquí */
+        --text: #eceff2; /* 🎨 Cambia el color hexadecimal aquí */
+        --muted: #aab4be; /* 🎨 Cambia el color hexadecimal aquí */
+        --line: #2c333b; /* 🎨 Cambia el color hexadecimal aquí */
+        --accent: #8bb0ff; /* 🎨 Cambia el color hexadecimal aquí */
+        --accent-soft: #26354a; /* 🎨 Cambia el color hexadecimal aquí */
+        --danger: #ff6b81; /* 🎨 Cambia el color hexadecimal aquí */
+        --warning: #f8b84e; /* 🎨 Cambia el color hexadecimal aquí */
+        --shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: var(--font-body);
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        width: min(1120px, calc(100% - 2rem));
+        margin-inline: auto;
+      }
+
+      .progress-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1500;
+        height: 4px;
+        width: 0;
+        background: linear-gradient(90deg, #31c4ff, #7f5bff, #ff4d87);
+      }
+
+      .top-header {
+        background: var(--surface);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .top-header .container {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 0.8rem;
+        padding: 0.9rem 0;
+      }
+
+      .logo-date {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+      }
+
+      .logo {
+        font-family: var(--font-title);
+        font-size: clamp(1.45rem, 3.5vw, 2rem);
+        font-weight: 900;
+        letter-spacing: 0.3px;
+      }
+
+      .date-today {
+        font-size: 0.9rem;
+        color: var(--muted);
+      }
+
+      .header-actions {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0.45rem;
+      }
+
+      .icon-btn,
+      .hamburger {
+        width: 42px;
+        height: 42px;
+        border: 1px solid var(--line);
+        background: var(--surface);
+        color: var(--text);
+        border-radius: 999px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+
+      .icon-btn svg,
+      .hamburger svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      .search-panel {
+        grid-column: 1 / -1;
+        display: none;
+      }
+
+      .search-panel.visible {
+        display: block;
+      }
+
+      .search-panel input {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 0.75rem 0.9rem;
+        font-size: 0.95rem;
+        background: var(--surface);
+        color: var(--text);
+      }
+
+      .main-nav {
+        position: sticky;
+        top: 0;
+        z-index: 1200;
+        background: color-mix(in srgb, var(--surface) 92%, transparent);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav-scroll {
+        display: flex;
+        gap: 0.25rem;
+        overflow-x: auto;
+        white-space: nowrap;
+        scrollbar-width: thin;
+        padding: 0.35rem 0;
+      }
+
+      .nav-scroll a {
+        padding: 0.55rem 0.85rem;
+        border-radius: 999px;
+        font-size: 0.92rem;
+        font-weight: 600;
+      }
+
+      .nav-scroll a:hover,
+      .nav-scroll a:focus-visible {
+        background: var(--accent-soft);
+        color: var(--accent);
+      }
+
+      .hero {
+        margin-top: 1rem;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+
+      .hero-media {
+        position: relative;
+        aspect-ratio: 16 / 9;
+      }
+
+      .hero-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .badge {
+        position: absolute;
+        left: 1rem;
+        top: 1rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.35rem 0.65rem;
+        border-radius: 999px;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.2px;
+        background: var(--accent);
+        color: #fff;
+      }
+
+      .hero-content {
+        padding: 1rem;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: var(--font-title);
+        margin: 0;
+        line-height: 1.25;
+      }
+
+      .hero-content h1 {
+        font-size: clamp(1.55rem, 4.2vw, 2.25rem);
+        margin-bottom: 0.7rem;
+      }
+
+      .hero-content p {
+        margin: 0;
+      }
+
+      .excerpt {
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .meta-row {
+        margin-top: 0.8rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        align-items: center;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .share-btn {
+        margin-left: auto;
+        border: 1px solid var(--line);
+        background: var(--surface);
+        color: var(--text);
+        border-radius: 999px;
+        width: 36px;
+        height: 36px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+
+      .share-btn svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      .content-wrap {
+        display: grid;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      .news-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        background: var(--surface);
+        border-radius: 14px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      .card-media {
+        position: relative;
+        aspect-ratio: 8 / 5;
+        overflow: hidden;
+      }
+
+      .card-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.35s ease;
+      }
+
+      .chip {
+        position: absolute;
+        top: 0.8rem;
+        left: 0.8rem;
+        z-index: 3;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.25rem 0.55rem;
+        border-radius: 999px;
+        font-size: 0.74rem;
+        font-weight: 700;
+        color: #fff;
+      }
+
+      .chip.live {
+        background: var(--danger);
+      }
+
+      .chip.live .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #fff;
+        animation: blink 1.1s infinite;
+      }
+
+      .chip.opinion {
+        background: var(--warning);
+        color: #2b1b00;
+      }
+
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.25;
+        }
+      }
+
+      .card-body {
+        padding: 0.9rem;
+        display: grid;
+        gap: 0.6rem;
+      }
+
+      .card-body h2 {
+        font-size: 1.15rem;
+      }
+
+      .card .meta-row {
+        margin-top: 0;
+      }
+
+      .sidebar {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .box {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 1rem;
+      }
+
+      .box h3 {
+        margin-bottom: 0.8rem;
+        font-size: 1.08rem;
+      }
+
+      .updates,
+      .popular {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 0.7rem;
+      }
+
+      .updates li {
+        border-bottom: 1px dashed var(--line);
+        padding-bottom: 0.55rem;
+      }
+
+      .updates time {
+        color: var(--danger);
+        font-weight: 700;
+        font-size: 0.9rem;
+        display: inline-block;
+        min-width: 3.2rem;
+      }
+
+      .newsletter form {
+        display: grid;
+        gap: 0.7rem;
+      }
+
+      .newsletter input,
+      .newsletter button {
+        width: 100%;
+        border-radius: 10px;
+        border: 1px solid var(--line);
+        padding: 0.7rem 0.8rem;
+        font: inherit;
+      }
+
+      .newsletter button {
+        border-color: var(--accent);
+        background: var(--accent);
+        color: #fff;
+        cursor: pointer;
+        font-weight: 700;
+      }
+
+      .popular {
+        counter-reset: ranking;
+      }
+
+      .popular li {
+        counter-increment: ranking;
+        display: flex;
+        gap: 0.7rem;
+      }
+
+      .popular li::before {
+        content: counter(ranking) ".";
+        font-weight: 800;
+        color: var(--accent);
+      }
+
+      .site-footer {
+        margin-top: 1.4rem;
+        background: var(--surface);
+        border-top: 1px solid var(--line);
+      }
+
+      .footer-grid {
+        display: grid;
+        gap: 1rem;
+        padding: 1.2rem 0;
+      }
+
+      .footer-legal,
+      .social-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+      }
+
+      .social-links a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+      }
+
+      .go-top {
+        position: fixed;
+        right: 1rem;
+        bottom: 1rem;
+        width: 48px;
+        height: 48px;
+        border-radius: 999px;
+        border: none;
+        background: var(--accent);
+        color: #fff;
+        box-shadow: var(--shadow);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(8px);
+        transition: all 0.25s ease;
+        cursor: pointer;
+        z-index: 1000;
+      }
+
+      .go-top.visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        .card:hover {
+          transform: translateY(-3px);
+          box-shadow: var(--shadow);
+        }
+
+        .card:hover .card-media img {
+          transform: scale(1.06);
+        }
+      }
+
+      @media (min-width: 900px) {
+        .top-header .container {
+          grid-template-columns: 1fr auto;
+          align-items: center;
+        }
+
+        .search-panel {
+          grid-column: auto;
+          width: clamp(260px, 30vw, 360px);
+        }
+
+        .content-wrap {
+          grid-template-columns: 7fr 3fr;
+          align-items: start;
+        }
+
+        .news-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .sidebar {
+          position: sticky;
+          top: 4.8rem;
+        }
+
+        .footer-grid {
+          grid-template-columns: 2fr 1fr 1fr;
+          align-items: start;
+        }
+      }
+    </style>
+  </head>
+  <!-- 🛑 ZONA DE SISTEMA (CSS/JS) - NO TOCAR O LA PÁGINA SE ROMPERÁ 🛑 -->
+
+  <body>
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- 🟢 ZONA SEGURA - A PARTIR DE AQUÍ PUEDES ESCRIBIR 🟢 -->
+    <header class="top-header">
+      <div class="container">
+        <div class="logo-date">
+          <!-- ✏️ CAMBIA EL TITULAR/TEXTO EN LA SIGUIENTE LÍNEA -->
+          <a class="logo" href="#">Diario Horizonte</a>
+          <p class="date-today" id="currentDate"></p>
+        </div>
+        <div class="header-actions">
+          <button class="icon-btn" id="searchToggle" type="button" aria-label="Abrir buscador">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="11" cy="11" r="7"></circle>
+              <line x1="20" y1="20" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+          <button class="icon-btn" id="themeToggle" type="button" aria-label="Cambiar tema">
+            <svg id="iconSun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <line x1="12" y1="2" x2="12" y2="5"></line>
+              <line x1="12" y1="19" x2="12" y2="22"></line>
+              <line x1="2" y1="12" x2="5" y2="12"></line>
+              <line x1="19" y1="12" x2="22" y2="12"></line>
+              <line x1="4.93" y1="4.93" x2="7.05" y2="7.05"></line>
+              <line x1="16.95" y1="16.95" x2="19.07" y2="19.07"></line>
+              <line x1="4.93" y1="19.07" x2="7.05" y2="16.95"></line>
+              <line x1="16.95" y1="7.05" x2="19.07" y2="4.93"></line>
+            </svg>
+            <svg id="iconMoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" hidden>
+              <path d="M21 12.79A9 9 0 1 1 11.21 3c0 0-.5 8 9.79 9.79z"></path>
+            </svg>
+          </button>
+          <button class="hamburger" type="button" aria-label="Menú principal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <div class="search-panel" id="searchPanel">
+          <input type="search" placeholder="Buscar por tema, región o autor" aria-label="Buscar noticias" />
+        </div>
+      </div>
+    </header>
+
+    <nav class="main-nav" aria-label="Secciones">
+      <div class="container nav-scroll">
+        <!-- 🔗 PEGA LA DIRECCIÓN DEL ENLACE DENTRO DE LAS COMILLAS DEL href="" -->
+        <a href="#politica">Política</a>
+        <a href="#economia">Economía</a>
+        <a href="#mundo">Mundo</a>
+        <a href="#deportes">Deportes</a>
+        <a href="#regionales">Regionales</a>
+        <a href="#reportajes">Reportajes</a>
+        <a href="#opinion">Opinión</a>
+        <a href="#cultura">Cultura</a>
+      </div>
+    </nav>
+
+    <main class="container">
+      <article class="hero">
+        <div class="hero-media">
+          <!-- 🖼️ PEGA EL ENLACE DE TU FOTO DENTRO DE LAS COMILLAS DEL src="" -->
+          <img
+            src="https://dummyimage.com/1280x720/c8d2df/1a1f24.jpg&text=Foto+principal+16:9"
+            alt="Autoridades y ciudadanía reunidas en sesión pública"
+            data-size="1280x720"
+          />
+          <!-- ✏️ CAMBIA EL TITULAR/TEXTO EN LA SIGUIENTE LÍNEA -->
+          <span class="badge">Exclusivo</span>
+        </div>
+        <div class="hero-content">
+          <!-- ✏️ CAMBIA EL TITULAR/TEXTO EN LA SIGUIENTE LÍNEA -->
+          <h1>
+            Reforma de transporte urbano avanza con plan piloto que reducirá en 30% los tiempos de viaje en Lima Norte
+          </h1>
+          <!-- ✏️ CAMBIA EL TITULAR/TEXTO EN LA SIGUIENTE LÍNEA -->
+          <p class="excerpt">
+            El municipio y operadores privados iniciarán una fase de prueba de 60 días con carriles integrados, nuevos paraderos y fiscalización digital en hora punta.
+          </p>
+          <div class="meta-row">
+            <!-- ✏️ CAMBIA EL TITULAR/TEXTO EN LA SIGUIENTE LÍNEA -->
+            <span>Por Camila Torres</span>
+            <!-- ✏️ CAMBIA EL TITULAR/TEXTO EN LA SIGUIENTE LÍNEA -->
+            <span>Lectura de 6 min</span>
+            <button
+              class="share-btn"
+              type="button"
+              aria-label="Compartir noticia principal"
+              data-share
+              data-share-title="Reforma de transporte urbano avanza con plan piloto"
+              data-share-text="Revisa esta noticia destacada en Diario Horizonte"
+              data-share-url="https://maximoglezugto.github.io/Pagina-de-noticias/#portada"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="18" cy="5" r="3"></circle>
+                <circle cx="6" cy="12" r="3"></circle>
+                <circle cx="18" cy="19" r="3"></circle>
+                <line x1="8.7" y1="10.7" x2="15.3" y2="6.3"></line>
+                <line x1="8.7" y1="13.3" x2="15.3" y2="17.7"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <section class="content-wrap">
+        <div class="news-grid">
+          <article class="card" id="politica">
+            <div class="card-media">
+              <span class="chip live"><span class="dot"></span>En vivo</span>
+              <!-- 🖼️ PEGA EL ENLACE DE TU FOTO DENTRO DE LAS COMILLAS DEL src="" -->
+              <img src="https://dummyimage.com/800x500/d7dee9/1a1f24.jpg&text=Congreso+8:5" alt="Debate legislativo" data-size="800x500" />
+            </div>
+            <div class="card-body">
+              <!-- ✏️ CAMBIA EL TITULAR/TEXTO EN LA SIGUIENTE LÍNEA -->
+              <h2>Congreso retoma debate sobre ley de compras públicas con foco en transparencia regional</h2>
+              <!-- ✏️ CAMBIA EL TITULAR/TEXTO EN LA SIGUIENTE LÍNEA -->
+              <p class="excerpt">Las bancadas negocian una adenda para incluir vigilancia ciudadana y paneles de seguimiento de contratos en tiempo real.</p>
+              <div class="meta-row">
+                <span>Actualizado hace 12 min</span>
+                <button class="share-btn" type="button" aria-label="Compartir noticia" data-share data-share-title="Congreso retoma debate" data-share-text="Mira este resumen político" data-share-url="https://maximoglezugto.github.io/Pagina-de-noticias/#politica">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="18" cy="5" r="3"></circle>
+                    <circle cx="6" cy="12" r="3"></circle>
+                    <circle cx="18" cy="19" r="3"></circle>
+                    <line x1="8.7" y1="10.7" x2="15.3" y2="6.3"></line>
+                    <line x1="8.7" y1="13.3" x2="15.3" y2="17.7"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" id="economia">
+            <div class="card-media">
+              <!-- 🖼️ PEGA EL ENLACE DE TU FOTO DENTRO DE LAS COMILLAS DEL src="" -->
+              <img src="https://dummyimage.com/800x500/d3dae5/1a1f24.jpg&text=Mercado+8:5" alt="Actividad en mercado mayorista" data-size="800x500" />
+            </div>
+            <div class="card-body">
+              <!-- ✏️ CAMBIA EL TITULAR/TEXTO EN LA SIGUIENTE LÍNEA -->
+              <h2>Canasta familiar registra su menor alza del año y abre espacio para nuevas rebajas en tasas</h2>
+              <!-- ✏️ CAMBIA EL TITULAR/TEXTO EN LA SIGUIENTE LÍNEA -->
+              <p class="excerpt">Economistas prevén que el consumo se recupere durante la campaña navideña si se mantiene la estabilidad de combustibles y alimentos.</p>
+              <div class="meta-row">
+                <span>Por Redacción Economía</span>
+                <button class="share-btn" type="button" aria-label="Compartir noticia" data-share data-share-title="Canasta familiar registra menor alza" data-share-text="Panorama económico del día" data-share-url="https://maximoglezugto.github.io/Pagina-de-noticias/#economia">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="18" cy="5" r="3"></circle>
+                    <circle cx="6" cy="12" r="3"></circle>
+                    <circle cx="18" cy="19" r="3"></circle>
+                    <line x1="8.7" y1="10.7" x2="15.3" y2="6.3"></line>
+                    <line x1="8.7" y1="13.3" x2="15.3" y2="17.7"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" id="mundo">
+            <div class="card-media">
+              <span class="chip opinion">Opinión</span>
+              <!-- 🖼️ PEGA EL ENLACE DE TU FOTO DENTRO DE LAS COMILLAS DEL src="" -->
+              <img src="https://dummyimage.com/800x500/dce2ea/1a1f24.jpg&text=Analisis+global+8:5" alt="Analista en estudio internacional" data-size="800x500" />
+            </div>
+            <div class="card-body">
+              <!-- ✏️ CAMBIA EL TITULAR/TEXTO EN LA SIGUIENTE LÍNEA -->
+              <h2>¿Qué cambia en la región tras el nuevo acuerdo energético entre países andinos?</h2>
+              <!-- ✏️ CAMBIA EL TITULAR/TEXTO EN LA SIGUIENTE LÍNEA -->
+              <p class="excerpt">Especialistas advierten que el pacto puede bajar costos eléctricos, pero exigen reglas claras para proteger a pequeños productores.</p>
+              <div class="meta-row">
+                <span>Columna internacional</span>
+                <button class="share-btn" type="button" aria-label="Compartir noticia" data-share data-share-title="Nuevo acuerdo energético andino" data-share-text="Lee esta opinión sobre el impacto regional" data-share-url="https://maximoglezugto.github.io/Pagina-de-noticias/#mundo">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="18" cy="5" r="3"></circle>
+                    <circle cx="6" cy="12" r="3"></circle>
+                    <circle cx="18" cy="19" r="3"></circle>
+                    <line x1="8.7" y1="10.7" x2="15.3" y2="6.3"></line>
+                    <line x1="8.7" y1="13.3" x2="15.3" y2="17.7"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" id="deportes">
+            <div class="card-media">
+              <!-- 🖼️ PEGA EL ENLACE DE TU FOTO DENTRO DE LAS COMILLAS DEL src="" -->
+              <img src="https://dummyimage.com/800x500/cdd8e7/1a1f24.jpg&text=Deportes+8:5" alt="Entrenamiento de selección" data-size="800x500" />
+            </div>
+            <div class="card-body">
+              <!-- ✏️ CAMBIA EL TITULAR/TEXTO EN LA SIGUIENTE LÍNEA -->
+              <h2>Selección nacional define once titular con dos juveniles para duelo clave de eliminatorias</h2>
+              <!-- ✏️ CAMBIA EL TITULAR/TEXTO EN LA SIGUIENTE LÍNEA -->
+              <p class="excerpt">El comando técnico apuesta por intensidad en mediocampo y velocidad por bandas para sostener la presión desde el inicio.</p>
+              <div class="meta-row">
+                <span>Cobertura especial</span>
+                <button class="share-btn" type="button" aria-label="Compartir noticia" data-share data-share-title="Selección define once titular" data-share-text="Así llega el equipo al partido" data-share-url="https://maximoglezugto.github.io/Pagina-de-noticias/#deportes">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="18" cy="5" r="3"></circle>
+                    <circle cx="6" cy="12" r="3"></circle>
+                    <circle cx="18" cy="19" r="3"></circle>
+                    <line x1="8.7" y1="10.7" x2="15.3" y2="6.3"></line>
+                    <line x1="8.7" y1="13.3" x2="15.3" y2="17.7"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" id="regionales">
+            <div class="card-media">
+              <!-- 🖼️ PEGA EL ENLACE DE TU FOTO DENTRO DE LAS COMILLAS DEL src="" -->
+              <img src="https://dummyimage.com/800x500/d6dfe9/1a1f24.jpg&text=Regiones+8:5" alt="Obra vial en región" data-size="800x500" />
+            </div>
+            <div class="card-body">
+              <!-- ✏️ CAMBIA EL TITULAR/TEXTO EN LA SIGUIENTE LÍNEA -->
+              <h2>Regiones del sur aceleran obras de agua potable tras acuerdo técnico con el Ejecutivo</h2>
+              <!-- ✏️ CAMBIA EL TITULAR/TEXTO EN LA SIGUIENTE LÍNEA -->
+              <p class="excerpt">El plan prioriza distritos con mayor brecha de acceso y contempla supervisión ciudadana para evitar retrasos.</p>
+              <div class="meta-row">
+                <span>Informe regional</span>
+                <button class="share-btn" type="button" aria-label="Compartir noticia" data-share data-share-title="Regiones del sur aceleran obras" data-share-text="Avances en infraestructura básica" data-share-url="https://maximoglezugto.github.io/Pagina-de-noticias/#regionales">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="18" cy="5" r="3"></circle>
+                    <circle cx="6" cy="12" r="3"></circle>
+                    <circle cx="18" cy="19" r="3"></circle>
+                    <line x1="8.7" y1="10.7" x2="15.3" y2="6.3"></line>
+                    <line x1="8.7" y1="13.3" x2="15.3" y2="17.7"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" id="cultura">
+            <div class="card-media">
+              <span class="chip opinion">Opinión</span>
+              <!-- 🖼️ PEGA EL ENLACE DE TU FOTO DENTRO DE LAS COMILLAS DEL src="" -->
+              <img src="https://dummyimage.com/800x500/cdd8e2/1a1f24.jpg&text=Cultura+8:5" alt="Exposición en museo" data-size="800x500" />
+            </div>
+            <div class="card-body">
+              <!-- ✏️ CAMBIA EL TITULAR/TEXTO EN LA SIGUIENTE LÍNEA -->
+              <h2>La nueva ruta de museos barriales demuestra que cultura también puede transformar seguridad</h2>
+              <!-- ✏️ CAMBIA EL TITULAR/TEXTO EN LA SIGUIENTE LÍNEA -->
+              <p class="excerpt">Gestores locales cuentan cómo los talleres nocturnos para jóvenes han reducido conflictos y devuelto vida a espacios públicos.</p>
+              <div class="meta-row">
+                <span>Especial Cultura</span>
+                <button class="share-btn" type="button" aria-label="Compartir noticia" data-share data-share-title="Ruta de museos barriales" data-share-text="Conoce este reportaje cultural" data-share-url="https://maximoglezugto.github.io/Pagina-de-noticias/#cultura">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="18" cy="5" r="3"></circle>
+                    <circle cx="6" cy="12" r="3"></circle>
+                    <circle cx="18" cy="19" r="3"></circle>
+                    <line x1="8.7" y1="10.7" x2="15.3" y2="6.3"></line>
+                    <line x1="8.7" y1="13.3" x2="15.3" y2="17.7"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <aside class="sidebar">
+          <section class="box">
+            <!-- ✏️ CAMBIA EL TITULAR/TEXTO EN LA SIGUIENTE LÍNEA -->
+            <h3>Último minuto</h3>
+            <ul class="updates">
+              <li><time>10:42</time>Fiscalía anuncia nuevo equipo para casos de corrupción municipal.</li>
+              <li><time>10:31</time>MEF confirma paquete de apoyo para mypes exportadoras.</li>
+              <li><time>10:18</time>Senamhi mantiene alerta por lluvias intensas en la sierra central.</li>
+              <li><time>09:57</time>Metro amplía horario por concierto internacional en el Estadio Nacional.</li>
+            </ul>
+          </section>
+
+          <section class="box newsletter" id="reportajes">
+            <!-- ✏️ CAMBIA EL TITULAR/TEXTO EN LA SIGUIENTE LÍNEA -->
+            <h3>Newsletter de la mañana</h3>
+            <!-- ✏️ CAMBIA EL TITULAR/TEXTO EN LA SIGUIENTE LÍNEA -->
+            <p class="excerpt">Recibe un resumen claro con las 7 noticias que moverán el día.</p>
+            <form>
+              <input type="email" placeholder="Tu correo electrónico" required />
+              <button type="submit">Suscribirme gratis</button>
+            </form>
+          </section>
+
+          <section class="box" id="opinion">
+            <!-- ✏️ CAMBIA EL TITULAR/TEXTO EN LA SIGUIENTE LÍNEA -->
+            <h3>Lo más leído</h3>
+            <ol class="popular">
+              <li>Cinco claves para entender la nueva tarifa social de energía.</li>
+              <li>El mapa de obras viales que se inauguran antes de fin de año.</li>
+              <li>Cómo impactará el tipo de cambio en tus compras navideñas.</li>
+              <li>Guía práctica para tramitar tu DNI electrónico sin colas.</li>
+              <li>La historia detrás del barrio que recuperó su plaza central.</li>
+            </ol>
+          </section>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <section>
+          <!-- ✏️ CAMBIA EL TITULAR/TEXTO EN LA SIGUIENTE LÍNEA -->
+          <h3>Diario Horizonte</h3>
+          <!-- ✏️ CAMBIA EL TITULAR/TEXTO EN LA SIGUIENTE LÍNEA -->
+          <p class="excerpt">Portal digital de noticias con cobertura local, nacional e internacional para entender lo que pasa, sin rodeos.</p>
+        </section>
+        <section>
+          <h3>Información legal</h3>
+          <div class="footer-legal">
+            <!-- 🔗 PEGA LA DIRECCIÓN DEL ENLACE DENTRO DE LAS COMILLAS DEL href="" -->
+            <a href="#">Términos</a>
+            <a href="#">Privacidad</a>
+            <a href="#">Publicidad</a>
+            <a href="#">Contacto</a>
+          </div>
+        </section>
+        <section>
+          <h3>Redes sociales</h3>
+          <div class="social-links">
+            <!-- 🔗 PEGA LA DIRECCIÓN DEL ENLACE DENTRO DE LAS COMILLAS DEL href="" -->
+            <a href="#">Facebook</a>
+            <a href="#">X / Twitter</a>
+            <a href="#">Instagram</a>
+            <a href="#">YouTube</a>
+          </div>
+          <p class="date-today">© <span id="currentYear"></span> Diario Horizonte.</p>
+        </section>
+      </div>
+    </footer>
+
+    <button class="go-top" type="button" id="goTop" aria-label="Ir arriba">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </button>
+
+    <!-- 🛑 ZONA DE SISTEMA (CSS/JS) - NO TOCAR O LA PÁGINA SE ROMPERÁ 🛑 -->
+    <script>
+      (() => {
+        const dateEl = document.getElementById("currentDate");
+        const yearEl = document.getElementById("currentYear");
+        const searchToggle = document.getElementById("searchToggle");
+        const searchPanel = document.getElementById("searchPanel");
+        const themeToggle = document.getElementById("themeToggle");
+        const sunIcon = document.getElementById("iconSun");
+        const moonIcon = document.getElementById("iconMoon");
+        const progressBar = document.getElementById("progressBar");
+        const goTop = document.getElementById("goTop");
+
+        const now = new Date();
+        dateEl.textContent = new Intl.DateTimeFormat("es-PE", {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric"
+        }).format(now);
+        yearEl.textContent = String(now.getFullYear());
+
+        searchToggle.addEventListener("click", () => {
+          searchPanel.classList.toggle("visible");
+        });
+
+        const applyTheme = (theme) => {
+          document.documentElement.setAttribute("data-theme", theme);
+          const isDark = theme === "dark";
+          sunIcon.hidden = isDark;
+          moonIcon.hidden = !isDark;
+        };
+
+        const preferredTheme = localStorage.getItem("theme") || "light";
+        applyTheme(preferredTheme);
+
+        themeToggle.addEventListener("click", () => {
+          const nextTheme = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+          applyTheme(nextTheme);
+          localStorage.setItem("theme", nextTheme);
+        });
+
+        const onScroll = () => {
+          const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+          const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          const percent = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+          progressBar.style.width = `${percent}%`;
+          goTop.classList.toggle("visible", scrollTop > 420);
+        };
+
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+
+        goTop.addEventListener("click", () => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        const shareButtons = document.querySelectorAll("[data-share]");
+
+        const fallbackShare = async (url, title) => {
+          try {
+            if (navigator.clipboard && window.isSecureContext) {
+              await navigator.clipboard.writeText(url);
+              alert(`Enlace copiado: ${title}`);
+            } else {
+              window.prompt("Copia este enlace:", url);
+            }
+          } catch {
+            window.prompt("Copia este enlace:", url);
+          }
+        };
+
+        shareButtons.forEach((button) => {
+          button.addEventListener("click", async () => {
+            const title = button.dataset.shareTitle || document.title;
+            const text = button.dataset.shareText || "Mira esta noticia";
+            const url = button.dataset.shareUrl || window.location.href;
+
+            if (navigator.share) {
+              try {
+                await navigator.share({ title, text, url });
+                return;
+              } catch (error) {
+                if (error.name === "AbortError") {
+                  return;
+                }
+              }
+            }
+
+            await fallbackShare(url, title);
+          });
+        });
+      })();
+    </script>
+    <!-- 🛑 ZONA DE SISTEMA (CSS/JS) - NO TOCAR O LA PÁGINA SE ROMPERÁ 🛑 -->
+  </body>
+</html>
