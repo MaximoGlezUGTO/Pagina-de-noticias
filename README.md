@@ -1,2 +1,830 @@
-# Pagina-de-noticias
-Noticias de Perú
+<!--
+********************************************************************************
+********************************************************************************
+***                                                                          ***
+***   📖  MINI-MANUAL: ASÍ SE EDITA ESTA PÁGINA EN 3 PASOS (¡ES FÁCIL!)      ***
+***                                                                          ***
+********************************************************************************
+********************************************************************************
+
+   PASO 1  ►  BUSCA LOS EMOJIS VERDES 🟢
+              Ahí empieza la zona donde puedes escribir. Antes de cada texto,
+              foto o enlace que puedes cambiar verás un comentario con un emoji:
+              ✏️ (texto)    🖼️ (foto)    🔗 (enlace)    🎨 (color)
+
+   PASO 2  ►  CAMBIA SOLO EL TEXTO EN NEGRO
+              Es el texto normal que está entre un  >  y un  <
+              NO borres ningún símbolo  < >  ni ninguna comilla  " "
+
+   PASO 3  ►  GUARDA CON  Ctrl + S
+              Luego abre el archivo en tu navegador (doble clic sobre él)
+              y presiona F5 para ver tus cambios.
+
+********************************************************************************
+   🛑 = NO TOCAR      🟢 = ZONA SEGURA      ↩️ ¿Algo salió mal? Presiona Ctrl + Z
+********************************************************************************
+-->
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <!-- 🛑 NO TOCAR: configuración técnica de la página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢 -->
+    <!-- 🟢 ZONA SEGURA - A PARTIR DE AQUÍ PUEDES ESCRIBIR 🟢 -->
+    <!-- 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢 -->
+    <!-- ℹ️ Esto controla lo que se ve en la pestaña del navegador, en Google y al compartir por WhatsApp o Facebook -->
+    <!-- ✏️ CAMBIA EL TÍTULO DE LA PÁGINA EN LA SIGUIENTE LÍNEA (sale en la pestaña del navegador) -->
+    <title>Nombre del Portal: noticias de hoy</title>
+    <!-- ✏️ CAMBIA LA DESCRIPCIÓN CORTA DENTRO DE LAS COMILLAS DEL content="" -->
+    <meta name="description" content="Las noticias más importantes de política, economía, mundo y deportes, con análisis y reportajes de todas las regiones.">
+    <!-- 🎨 CAMBIA EL CÓDIGO HEXADECIMAL DE LA BARRA DEL CELULAR (ponlo igual a tu color principal) -->
+    <meta name="theme-color" content="#c4122f">
+    <!-- 🔗 CAMBIA LA DIRECCIÓN DE TU PÁGINA DENTRO DE LAS COMILLAS (ejemplo: https://mipagina.com/) -->
+    <link rel="canonical" href="https://tu-sitio.com/">
+    <!-- ✏️ CAMBIA EL NOMBRE DE TU PORTAL DENTRO DE LAS COMILLAS DEL content="" -->
+    <meta property="og:site_name" content="Nombre del Portal">
+    <!-- ✏️ CAMBIA EL TÍTULO QUE SE VE AL COMPARTIR POR WHATSAPP O FACEBOOK -->
+    <meta property="og:title" content="Nombre del Portal: noticias de hoy">
+    <!-- ✏️ CAMBIA LA DESCRIPCIÓN QUE SE VE AL COMPARTIR -->
+    <meta property="og:description" content="Política, economía, mundo y deportes, con análisis y reportajes de todas las regiones.">
+    <!-- 🔗 CAMBIA LA DIRECCIÓN DE TU PÁGINA (la misma de arriba) DENTRO DE LAS COMILLAS -->
+    <meta property="og:url" content="https://tu-sitio.com/">
+    <!-- 🖼️ PEGA EL ENLACE DE LA FOTO PARA COMPARTIR DENTRO DE LAS COMILLAS DEL content="" (medida ideal: 1200 × 630 px) -->
+    <meta property="og:image" content="https://tu-sitio.com/img/compartir-1200x630.jpg">
+    <!-- ✏️ DESCRIBE LA FOTO PARA COMPARTIR EN POCAS PALABRAS -->
+    <meta property="og:image:alt" content="Portada de Nombre del Portal">
+    <!-- 🟢 FIN DE LA ZONA SEGURA DE ESTA PARTE 🟢 -->
+
+    <!-- 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 -->
+    <!-- 🛑 ZONA DE SISTEMA (CSS/JS) - NO TOCAR O LA PÁGINA SE ROMPERÁ 🛑 -->
+    <!-- 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_LA">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+      /* Aplica el tema guardado (o el del sistema) antes de pintar, para evitar parpadeos */
+      (function(){var t;try{t=localStorage.getItem('tema')}catch(e){}
+      if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+      document.documentElement.dataset.theme=t})();
+    </script>
+
+    <style>
+      /* ==========================================================================
+         🎨 COLORES DE LA PÁGINA
+         ⚠️ Solo puedes cambiar el código hexadecimal (ejemplo: #c4122f).
+         ⚠️ No borres los dos puntos (:) ni el punto y coma (;), y NO toques el resto
+            del bloque de diseño que está más abajo.
+         ========================================================================== */
+      :root{
+        color-scheme:light;
+
+        /* ----- Modo claro: colores que sí puedes cambiar ----- */
+        --accent:#c4122f;      /* 🎨 Si quieres cambiar el color principal de la página, reemplaza el código hexadecimal aquí */
+        --amber:#f5b82e;       /* 🎨 Amarillo de la etiqueta Opinión y de la barra de progreso */
+        --ink:#1c2127;         /* 🎨 Color de los textos y títulos */
+        --muted:#5b6570;       /* 🎨 Color de los textos pequeños (autor, hora) */
+        --lead:#3a424b;        /* 🎨 Color del resumen de la noticia principal */
+        --bg:#fff;             /* 🎨 Color del fondo de la página */
+        --soft:#f2f4f6;        /* 🎨 Fondo suave (botones al pasar el mouse) */
+        --rule:#d9dde2;        /* 🎨 Color de las líneas que separan */
+        --bar-bg:#1c2127;      /* 🎨 Barra oscura de arriba, pie de página y caja del boletín */
+        --on-accent:#fff;      /* 🎨 Color del texto que va sobre el color principal */
+        --ph:#d3d6da;          /* 🎨 Gris de las cajas de fotos vacías */
+        --ph-ink:#79828c;      /* 🎨 Color del texto dentro de las cajas grises */
+        --shadow:rgba(28,33,39,.16);   /* 🎨 Color de las sombras */
+
+        /* ----- Colores de apoyo (mejor no tocar) ----- */
+        --on-dark:#e4e7ea; --on-dark-2:#c9ced4; --on-dark-3:#9ba5b0;
+        --line-dark:#343b43; --line-dark-2:#4a525b;
+        --white:#fff; --dark-text:#1c2127; --label-ink:#4d555e; --label-bg:rgba(255,255,255,.7);
+
+        /* ----- Tipografías y ancho (mejor no tocar) ----- */
+        --serif:"Merriweather",Georgia,"Times New Roman",serif;
+        --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+        --max:1200px;
+      }
+
+      /* 🌙 COLORES DEL MODO OSCURO: mismos nombres, tonos pensados para leer de noche.
+         Aquí también puedes cambiar solo el código hexadecimal. */
+      [data-theme="dark"]{
+        color-scheme:dark;
+        --accent:#ff6b81;      /* 🎨 Color principal en modo oscuro */
+        --on-accent:#13171b;   /* 🎨 Texto sobre el color principal */
+        --ink:#eceff2;         /* 🎨 Textos y títulos */
+        --muted:#9ba5b0;       /* 🎨 Textos pequeños */
+        --lead:#c5ccd3;        /* 🎨 Resumen de la noticia principal */
+        --bg:#13171b;          /* 🎨 Fondo de la página */
+        --soft:#1d232a;        /* 🎨 Fondo suave */
+        --rule:#2f363e;        /* 🎨 Líneas que separan */
+        --bar-bg:#0a0d10;      /* 🎨 Barra de arriba, pie de página y boletín */
+        --ph:#2a3037;          /* 🎨 Cajas de fotos vacías */
+        --ph-ink:#8993a0;      /* 🎨 Texto dentro de las cajas */
+        --shadow:rgba(0,0,0,.6);
+      }
+
+      /* ⚠️ ¡ALTO! De aquí hacia abajo es el diseño de la página: no toques nada. */
+
+      *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+      body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
+      a{color:inherit;text-decoration:none}
+      a:hover{color:var(--accent)}
+      ul,ol{list-style:none}
+      button,input{font:inherit;color:inherit}
+      :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+      .wrap{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:1rem}
+
+      /* ========== Placeholders de imagen (el tamaño se ve en data-size) ========== */
+      /* Para usar fotos reales: coloca <img src="..." alt="..."> dentro del .ph */
+      .ph{position:relative;overflow:hidden;display:grid;place-items:center;width:100%;color:var(--ph-ink);font-size:.72rem;font-weight:600;text-align:center}
+      .ph::before{content:"";position:absolute;inset:0;background:var(--ph);transition:transform .45s ease}
+      .ph::after{content:attr(data-size);position:relative;z-index:1;padding:.25rem .5rem;background:var(--label-bg);color:var(--label-ink);border-radius:2px}
+      .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2;transition:transform .45s ease}
+      .r169{aspect-ratio:16/9}
+      .r85{aspect-ratio:8/5}
+      .ph img[src=""]{display:none}
+      .logo img{object-fit:contain;background:var(--bg)}
+      .foot-logo img{object-fit:contain;background:var(--bar-bg)}
+
+      /* ========== Textos comunes ========== */
+      .kicker{display:inline-block;font-size:.8rem;font-weight:700;color:var(--accent);margin-bottom:.4rem}
+      .meta{display:flex;flex-wrap:wrap;gap:.2rem 0;font-size:.78rem;color:var(--muted)}
+      .meta span:not(:last-child)::after{content:"";display:inline-block;width:1px;height:.8em;margin:0 .65rem;background:var(--rule);vertical-align:-.08em}
+      .sec-title{font-size:.95rem;font-weight:700;padding:.65rem 0;margin-bottom:1.25rem;border-top:2px solid var(--ink);border-bottom:1px solid var(--rule)}
+      .badge{position:absolute;top:.6rem;left:.6rem;z-index:3;display:inline-flex;align-items:center;gap:.35rem;padding:.2rem .5rem;border-radius:2px;background:var(--accent);color:var(--on-accent);font:700 .65rem/1.3 var(--sans);letter-spacing:.06em;text-transform:uppercase}
+      .badge.op{background:var(--amber);color:var(--dark-text)}
+      .badge.vivo::before{content:"";width:.45rem;height:.45rem;border-radius:50%;background:currentColor;animation:latido 1.4s ease-in-out infinite}
+      @keyframes latido{50%{opacity:.25}}
+      @media (prefers-reduced-motion:reduce){.badge.vivo::before{animation:none}}
+
+      /* ========== Header ========== */
+      .topbar{background:var(--bar-bg);color:var(--on-dark);font-size:.78rem}
+      .topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-block:.4rem}
+      .topbar nav{display:none;gap:1.25rem}
+      .topbar a:hover{color:var(--white);text-decoration:underline}
+      .head-main{display:flex;align-items:center;justify-content:space-between;padding-block:1rem}
+      .logo{width:180px;height:48px;font-size:.7rem}
+      .tools{display:flex;gap:.25rem}
+      .icon-btn{width:2.75rem;height:2.75rem;display:grid;place-items:center;background:none;border:0;cursor:pointer;border-radius:50%}
+      .icon-btn:hover{background:var(--soft)}
+      .icon-btn svg{width:1.4rem;height:1.4rem;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+      .sun{display:none}
+      [data-theme="dark"] .sun{display:block}
+      [data-theme="dark"] .moon{display:none}
+      .searchbar{display:flex;gap:.5rem;padding:0 1rem .75rem;max-width:var(--max);margin-inline:auto}
+      .searchbar[hidden]{display:none}
+      .searchbar input{flex:1;min-width:0;padding:.6rem .8rem;border:1px solid var(--rule);border-radius:4px;background:var(--bg)}
+      .searchbar button{padding:.6rem 1rem;border:0;border-radius:4px;background:var(--accent);color:var(--on-accent);font-weight:700;cursor:pointer}
+
+      /* ========== Barra de categorías fija ========== */
+      .mainnav{position:sticky;top:0;z-index:100;background:var(--bg);border-top:1px solid var(--ink);border-bottom:1px solid var(--rule);box-shadow:0 2px 10px var(--shadow)}
+      .navbar{display:flex;padding-block:.3rem}
+      .menu-btn{display:flex;align-items:center;gap:.5rem;padding:.5rem .25rem;background:none;border:0;font-weight:700;cursor:pointer}
+      .menu-btn svg{width:1.4rem;height:1.4rem;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+      #menu{display:none;flex-direction:column;max-height:calc(100vh - 3.5rem);overflow-y:auto}
+      .mainnav.open #menu{display:flex}
+      #menu a{display:block;padding:.75rem 0;font-size:.92rem;font-weight:600;border-top:1px solid var(--soft)}
+      @media (min-width:900px){
+        .topbar nav{display:flex}
+        .head-main{display:grid;grid-template-columns:1fr auto 1fr;padding-block:1.75rem}
+        .logo{grid-column:2;width:260px;height:64px}
+        .tools{grid-column:3;justify-self:end}
+        .navbar{display:none}
+        #menu{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;max-height:none;overflow:visible}
+        #menu a{padding:.85rem 1.1rem;border-top:0}
+        #menu a:hover{box-shadow:inset 0 -3px 0 var(--accent)}
+      }
+
+      /* ========== Hero ========== */
+      .hero{padding-block:1.5rem 0}
+      .hero article{display:grid;gap:1.25rem;padding-bottom:2rem;border-bottom:1px solid var(--rule)}
+      .hero h1{font-family:var(--serif);font-size:1.6rem;line-height:1.25;font-weight:700;margin-bottom:.9rem}
+      .hero .lead{font-size:1.05rem;line-height:1.65;color:var(--lead);margin-bottom:1rem}
+      @media (min-width:900px){
+        .hero{padding-top:2.5rem}
+        .hero article{grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:2.5rem;align-items:center;padding-bottom:3rem}
+        .hero h1{font-size:1.9rem;line-height:1.22}
+        .hero .lead{font-size:1.1rem}
+      }
+
+      /* ========== Cuerpo: 1 columna en móvil, 70/30 en escritorio ========== */
+      .layout{display:grid;gap:2.5rem;padding-block:2rem 4rem}
+      @media (min-width:900px){.layout{grid-template-columns:minmax(0,7fr) minmax(0,3fr);gap:2rem}}
+
+      .grid{display:grid;gap:1.5rem}
+      .card{display:grid;grid-template-columns:7rem 1fr;gap:1rem;padding-bottom:1.5rem;border-bottom:1px solid var(--rule)}
+      .card h3{font-family:var(--serif);font-size:.98rem;line-height:1.35;margin-bottom:.5rem}
+      @media (min-width:560px){
+        .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem}
+        .card{display:block;padding:.75rem;border-bottom:0;border-radius:4px;background:var(--bg);transition:transform .25s ease,box-shadow .25s ease}
+        .card .ph{margin-bottom:.85rem}
+        .card h3{font-size:1.05rem}
+      }
+      @media (min-width:1100px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+      /* Efecto hover: la tarjeta se eleva y la imagen hace zoom */
+      @media (hover:hover) and (prefers-reduced-motion:no-preference){
+        .card:hover{transform:translateY(-4px);box-shadow:0 10px 24px var(--shadow)}
+        .card:hover .ph::before,.card:hover .ph img,
+        .hero article:hover .ph::before,.hero article:hover .ph img{transform:scale(1.06)}
+        .card:hover h3 a{color:var(--accent)}
+      }
+
+      /* ========== Barra lateral ========== */
+      aside{display:grid;gap:2.5rem;align-content:start}
+      @media (min-width:900px){aside{padding-left:2rem;border-left:1px solid var(--rule)}}
+      .flash li{display:grid;grid-template-columns:3.2rem 1fr;gap:.5rem;padding-block:.85rem;border-bottom:1px solid var(--rule)}
+      .flash time{font-size:.8rem;font-weight:700;color:var(--accent)}
+      .flash a{font-size:.92rem;line-height:1.45;font-weight:600}
+      .top{counter-reset:n}
+      .top li{counter-increment:n;display:grid;grid-template-columns:2rem 1fr;gap:.5rem;padding-block:.85rem;border-bottom:1px solid var(--rule)}
+      .top li::before{content:counter(n);font-family:var(--serif);font-size:1.7rem;line-height:1;font-weight:700;color:var(--accent)}
+      .top a{font-family:var(--serif);font-size:.92rem;line-height:1.45}
+
+      /* ========== Boletín ========== */
+      .news{padding:1.5rem;border-radius:4px;background:var(--bar-bg);color:var(--on-dark);border:1px solid var(--rule)}
+      .news h2{font-family:var(--serif);font-size:1.05rem;line-height:1.4;color:var(--white);margin-bottom:.6rem}
+      .news p{font-size:.9rem;line-height:1.55;margin-bottom:1rem}
+      .news form{display:grid;gap:.6rem}
+      .news input{width:100%;padding:.7rem .8rem;border:1px solid transparent;border-radius:4px;background:var(--white);color:var(--dark-text)}
+      .news button{padding:.7rem 1rem;border:0;border-radius:4px;background:var(--accent);color:var(--on-accent);font-weight:700;cursor:pointer}
+      .news button:hover{filter:brightness(1.1)}
+      .news .ok{margin:0;font-weight:600;color:var(--white)}
+      .news small{display:block;margin-top:.9rem;font-size:.78rem;color:var(--on-dark-3)}
+
+      /* ========== Progreso de lectura y botón "Ir arriba" ========== */
+      .progreso{position:fixed;top:0;left:0;right:0;height:3px;z-index:200;pointer-events:none;background:linear-gradient(90deg,var(--accent),var(--amber));transform:scaleX(0);transform-origin:left}
+      .arriba{position:fixed;right:1.25rem;bottom:1.25rem;z-index:150;width:3rem;height:3rem;display:grid;place-items:center;border:0;border-radius:50%;background:var(--accent);color:var(--on-accent);box-shadow:0 6px 18px var(--shadow);cursor:pointer;opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .3s,transform .3s,visibility .3s}
+      .arriba.ver{opacity:1;visibility:visible;transform:none}
+      .arriba svg{width:1.3rem;height:1.3rem;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+      @media (prefers-reduced-motion:reduce){.arriba{transition:none}}
+
+      /* ========== Footer ========== */
+      footer{background:var(--bar-bg);color:var(--on-dark-2);font-size:.9rem}
+      .foot-grid{display:grid;gap:2.5rem;padding-block:3rem}
+      .foot-logo{width:180px;height:48px;margin-bottom:.75rem}
+      footer h2{font-size:.95rem;color:var(--white);margin-bottom:.75rem}
+      footer li{margin-bottom:.4rem}
+      footer a:hover{color:var(--white);text-decoration:underline}
+      .social{display:flex;flex-wrap:wrap;gap:.5rem}
+      .social a{padding:.35rem .8rem;border:1px solid var(--line-dark-2);border-radius:99px}
+      .social a:hover{border-color:var(--white);text-decoration:none}
+      .copy{border-top:1px solid var(--line-dark);padding-block:1.25rem;font-size:.8rem}
+      @media (min-width:700px){.foot-grid{grid-template-columns:2fr 1fr 1fr}}
+    </style>
+    <!-- 🛑 FIN DE LA ZONA DE SISTEMA 🛑 -->
+  </head>
+
+  <body>
+    <!-- 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢 -->
+    <!-- 🟢 ZONA SEGURA - A PARTIR DE AQUÍ PUEDES ESCRIBIR 🟢 -->
+    <!-- 🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢 -->
+    <!-- 🛑 NO TOCAR: barra de progreso de lectura (es parte del sistema) -->
+    <div class="progreso" id="progreso" aria-hidden="true"></div>
+
+    <!-- ======== 📍 INICIO: ENCABEZADO (HEADER): fecha, logo, modo oscuro y buscador ======== -->
+    <header>
+      <div class="topbar">
+        <div class="wrap">
+          <!-- 🛑 LA FECHA SE ESCRIBE SOLA: NO LA CAMBIES -->
+          <time id="fecha">Cargando fecha…</time>
+          <nav aria-label="Accesos rápidos">
+            <!-- ✏️ CAMBIA EL TEXTO DEL ENLACE Y 🔗 PEGA SU DIRECCIÓN DENTRO DE LAS COMILLAS DEL href="" -->
+            <a href="#">Suscríbete</a>
+            <!-- ✏️ CAMBIA EL TEXTO DEL ENLACE Y 🔗 PEGA SU DIRECCIÓN DENTRO DE LAS COMILLAS DEL href="" -->
+            <a href="#">Iniciar sesión</a>
+            <!-- ✏️ CAMBIA EL TEXTO DEL ENLACE Y 🔗 PEGA SU DIRECCIÓN DENTRO DE LAS COMILLAS DEL href="" -->
+            <a href="#">Edición impresa</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="wrap head-main">
+        <a class="ph logo" href="#" data-size="LOGO 260 × 64" aria-label="Inicio">
+          <!-- 🖼️ PEGA EL ENLACE DE TU LOGO DENTRO DE LAS COMILLAS DEL src="" -->
+          <!-- ✏️ Y en alt="" escribe el nombre de tu portal -->
+          <img src="" alt="Nombre del Portal">
+        </a>
+        <div class="tools">
+          <!-- 🛑 NO TOCAR: botones de modo oscuro y de búsqueda -->
+          <button class="icon-btn" id="btn-tema" aria-label="Activar modo oscuro">
+            <svg class="moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+            <svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          </button>
+          <button class="icon-btn" id="btn-search" aria-label="Buscar" aria-expanded="false" aria-controls="search">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- 🛑 NO TOCAR: caja de búsqueda (se abre con la lupa) -->
+      <form class="searchbar" id="search" role="search" hidden>
+        <input type="search" name="q" placeholder="Buscar noticias" aria-label="Buscar noticias">
+        <button type="submit">Buscar</button>
+      </form>
+    </header>
+    <!-- ======== 📍 FIN: ENCABEZADO (HEADER) ======== -->
+
+    <!-- ======== 📍 INICIO: MENÚ DE CATEGORÍAS (se queda fijo al bajar) ======== -->
+    <nav class="mainnav" id="nav" aria-label="Categorías">
+      <div class="wrap navbar">
+        <!-- 🛑 NO TOCAR: botón "Secciones" que se ve solo en el celular -->
+        <button class="menu-btn" id="btn-menu" aria-expanded="false" aria-controls="menu">
+          <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          Secciones
+        </button>
+      </div>
+      <ul class="wrap" id="menu">
+        <li>
+          <!-- ✏️ CAMBIA EL NOMBRE DE ESTA SECCIÓN Y 🔗 PEGA SU DIRECCIÓN DENTRO DE LAS COMILLAS DEL href="" -->
+          <a href="#">Política</a>
+        </li>
+        <li>
+          <!-- ✏️ CAMBIA EL NOMBRE DE ESTA SECCIÓN Y 🔗 PEGA SU DIRECCIÓN DENTRO DE LAS COMILLAS DEL href="" -->
+          <a href="#">Economía</a>
+        </li>
+        <li>
+          <!-- ✏️ CAMBIA EL NOMBRE DE ESTA SECCIÓN Y 🔗 PEGA SU DIRECCIÓN DENTRO DE LAS COMILLAS DEL href="" -->
+          <a href="#">Mundo</a>
+        </li>
+        <li>
+          <!-- ✏️ CAMBIA EL NOMBRE DE ESTA SECCIÓN Y 🔗 PEGA SU DIRECCIÓN DENTRO DE LAS COMILLAS DEL href="" -->
+          <a href="#">Deportes</a>
+        </li>
+        <li>
+          <!-- ✏️ CAMBIA EL NOMBRE DE ESTA SECCIÓN Y 🔗 PEGA SU DIRECCIÓN DENTRO DE LAS COMILLAS DEL href="" -->
+          <a href="#">Regionales</a>
+        </li>
+        <li>
+          <!-- ✏️ CAMBIA EL NOMBRE DE ESTA SECCIÓN Y 🔗 PEGA SU DIRECCIÓN DENTRO DE LAS COMILLAS DEL href="" -->
+          <a href="#">Reportajes</a>
+        </li>
+        <li>
+          <!-- ✏️ CAMBIA EL NOMBRE DE ESTA SECCIÓN Y 🔗 PEGA SU DIRECCIÓN DENTRO DE LAS COMILLAS DEL href="" -->
+          <a href="#">Opinión</a>
+        </li>
+        <li>
+          <!-- ✏️ CAMBIA EL NOMBRE DE ESTA SECCIÓN Y 🔗 PEGA SU DIRECCIÓN DENTRO DE LAS COMILLAS DEL href="" -->
+          <a href="#">Cultura</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- ======== 📍 FIN: MENÚ DE CATEGORÍAS ======== -->
+
+    <main>
+      <!-- ======== 📍 INICIO: NOTICIA PRINCIPAL (PORTADA) ======== -->
+      <section class="wrap hero" aria-label="Noticia de portada">
+        <article>
+          <a class="ph r169" href="#" data-size="Portada 1200 × 675" aria-label="Imagen de portada">
+            <!-- 🖼️ PEGA EL ENLACE DE TU FOTO DENTRO DE LAS COMILLAS DEL src="" -->
+            <!-- ✏️ Y en alt="" escribe en pocas palabras qué se ve en la foto -->
+            <img src="" alt="Describe aquí la foto">
+            <!-- ✏️ CAMBIA LA PALABRA DE LA ETIQUETA SOBRE LA FOTO (Exclusivo, En vivo u Opinión) -->
+            <span class="badge">Exclusivo</span>
+          </a>
+          <div>
+            <!-- ✏️ CAMBIA LA CATEGORÍA EN LA SIGUIENTE LÍNEA -->
+            <a class="kicker" href="#">Reportajes</a>
+            <!-- ✏️ CAMBIA EL TITULAR PRINCIPAL EN LA SIGUIENTE LÍNEA -->
+            <!-- 🔗 PARA QUE ABRA TU NOTICIA, CAMBIA EL # DENTRO DE LAS COMILLAS DEL href="" POR SU ENLACE -->
+            <h1><a href="#">Nuevos hallazgos arqueológicos en el sur del país revelan cómo se vivía hace mil años</a></h1>
+            <!-- ✏️ CAMBIA EL EXTRACTO (EL RESUMEN) EN LAS SIGUIENTES LÍNEAS -->
+            <p class="lead">
+              Un grupo de especialistas encontró restos de casas, herramientas y telas en una zona de difícil acceso. Los investigadores planean volver a excavar el próximo año.
+            </p>
+            <p class="meta">
+              <!-- ✏️ CAMBIA EL NOMBRE DEL AUTOR (deja la palabra "Por") -->
+              <span>Por Valeria Quispe Mendoza</span>
+              <!-- ✏️ CAMBIA CUÁNTO HACE QUE SE PUBLICÓ (ejemplo: Hace 3 horas) -->
+              <span>Hace 2 horas</span>
+              <!-- ✏️ CAMBIA EL TIEMPO DE LECTURA (ejemplo: Lectura de 3 min) -->
+              <span>Lectura de 4 min</span>
+            </p>
+          </div>
+        </article>
+      </section>
+      <!-- ======== 📍 FIN: NOTICIA PRINCIPAL (PORTADA) ======== -->
+
+      <div class="wrap layout">
+
+        <!-- ======== 📍 INICIO: MÁS NOTICIAS (cuadrícula de 6 noticias) ======== -->
+        <section aria-labelledby="t-mas">
+          <!-- ✏️ CAMBIA EL TÍTULO DE ESTA SECCIÓN EN LA SIGUIENTE LÍNEA -->
+          <h2 class="sec-title" id="t-mas">Más noticias</h2>
+          <div class="grid">
+            <!-- 📰 NOTICIA 1 DE 6 -->
+            <article class="card">
+              <a class="ph r85" href="#" data-size="600 × 375" aria-label="Miniatura">
+                <!-- 🖼️ PEGA EL ENLACE DE TU FOTO DENTRO DE LAS COMILLAS DEL src="" -->
+                <!-- ✏️ Y en alt="" escribe en pocas palabras qué se ve en la foto -->
+                <img src="" alt="Describe aquí la foto" loading="lazy">
+              </a>
+              <div>
+                <!-- ✏️ CAMBIA LA CATEGORÍA EN LA SIGUIENTE LÍNEA -->
+                <a class="kicker" href="#">Economía</a>
+                <!-- ✏️ CAMBIA EL TITULAR DE ESTA NOTICIA EN LA SIGUIENTE LÍNEA -->
+                <!-- 🔗 PARA QUE ABRA TU NOTICIA, CAMBIA EL # DENTRO DE LAS COMILLAS DEL href="" POR SU ENLACE -->
+                <h3><a href="#">Análisis de la economía regional: cómo van el empleo y la inversión</a></h3>
+                <p class="meta">
+                  <!-- ✏️ CAMBIA EL NOMBRE DEL AUTOR (deja la palabra "Por") -->
+                  <span>Por Rodrigo Salazar</span>
+                  <!-- ✏️ CAMBIA CUÁNTO HACE QUE SE PUBLICÓ (ejemplo: Hace 3 horas) -->
+                  <span>Hace 3 horas</span>
+                  <!-- ✏️ CAMBIA EL TIEMPO DE LECTURA (ejemplo: Lectura de 3 min) -->
+                  <span>Lectura de 5 min</span>
+                </p>
+              </div>
+            </article>
+
+            <!-- 📰 NOTICIA 2 DE 6 -->
+            <article class="card">
+              <a class="ph r85" href="#" data-size="600 × 375" aria-label="Miniatura">
+                <!-- 🖼️ PEGA EL ENLACE DE TU FOTO DENTRO DE LAS COMILLAS DEL src="" -->
+                <!-- ✏️ Y en alt="" escribe en pocas palabras qué se ve en la foto -->
+                <img src="" alt="Describe aquí la foto" loading="lazy">
+                <!-- ✏️ CAMBIA LA PALABRA DE LA ETIQUETA SOBRE LA FOTO (Exclusivo, En vivo u Opinión) -->
+                <span class="badge vivo">En vivo</span>
+              </a>
+              <div>
+                <!-- ✏️ CAMBIA LA CATEGORÍA EN LA SIGUIENTE LÍNEA -->
+                <a class="kicker" href="#">Mundo</a>
+                <!-- ✏️ CAMBIA EL TITULAR DE ESTA NOTICIA EN LA SIGUIENTE LÍNEA -->
+                <!-- 🔗 PARA QUE ABRA TU NOTICIA, CAMBIA EL # DENTRO DE LAS COMILLAS DEL href="" POR SU ENLACE -->
+                <h3><a href="#">En vivo: cumbre de cooperación reúne a once países para hablar de energía limpia</a></h3>
+                <p class="meta">
+                  <!-- ✏️ CAMBIA EL NOMBRE DEL AUTOR (deja la palabra "Por") -->
+                  <span>Por Camila Huamán</span>
+                  <!-- ✏️ CAMBIA CUÁNTO HACE QUE SE PUBLICÓ (ejemplo: Hace 3 horas) -->
+                  <span>Hace 12 minutos</span>
+                  <!-- ✏️ CAMBIA EL TIEMPO DE LECTURA (ejemplo: Lectura de 3 min) -->
+                  <span>Lectura de 3 min</span>
+                </p>
+              </div>
+            </article>
+
+            <!-- 📰 NOTICIA 3 DE 6 -->
+            <article class="card">
+              <a class="ph r85" href="#" data-size="600 × 375" aria-label="Miniatura">
+                <!-- 🖼️ PEGA EL ENLACE DE TU FOTO DENTRO DE LAS COMILLAS DEL src="" -->
+                <!-- ✏️ Y en alt="" escribe en pocas palabras qué se ve en la foto -->
+                <img src="" alt="Describe aquí la foto" loading="lazy">
+              </a>
+              <div>
+                <!-- ✏️ CAMBIA LA CATEGORÍA EN LA SIGUIENTE LÍNEA -->
+                <a class="kicker" href="#">Deportes</a>
+                <!-- ✏️ CAMBIA EL TITULAR DE ESTA NOTICIA EN LA SIGUIENTE LÍNEA -->
+                <!-- 🔗 PARA QUE ABRA TU NOTICIA, CAMBIA EL # DENTRO DE LAS COMILLAS DEL href="" POR SU ENLACE -->
+                <h3><a href="#">La selección juvenil termina su preparación con una victoria ante un rival difícil</a></h3>
+                <p class="meta">
+                  <!-- ✏️ CAMBIA EL NOMBRE DEL AUTOR (deja la palabra "Por") -->
+                  <span>Por Diego Ramírez</span>
+                  <!-- ✏️ CAMBIA CUÁNTO HACE QUE SE PUBLICÓ (ejemplo: Hace 3 horas) -->
+                  <span>Hace 5 horas</span>
+                  <!-- ✏️ CAMBIA EL TIEMPO DE LECTURA (ejemplo: Lectura de 3 min) -->
+                  <span>Lectura de 2 min</span>
+                </p>
+              </div>
+            </article>
+
+            <!-- 📰 NOTICIA 4 DE 6 -->
+            <article class="card">
+              <a class="ph r85" href="#" data-size="600 × 375" aria-label="Miniatura">
+                <!-- 🖼️ PEGA EL ENLACE DE TU FOTO DENTRO DE LAS COMILLAS DEL src="" -->
+                <!-- ✏️ Y en alt="" escribe en pocas palabras qué se ve en la foto -->
+                <img src="" alt="Describe aquí la foto" loading="lazy">
+              </a>
+              <div>
+                <!-- ✏️ CAMBIA LA CATEGORÍA EN LA SIGUIENTE LÍNEA -->
+                <a class="kicker" href="#">Regionales</a>
+                <!-- ✏️ CAMBIA EL TITULAR DE ESTA NOTICIA EN LA SIGUIENTE LÍNEA -->
+                <!-- 🔗 PARA QUE ABRA TU NOTICIA, CAMBIA EL # DENTRO DE LAS COMILLAS DEL href="" POR SU ENLACE -->
+                <h3><a href="#">Comunidades altoandinas reciben agua potable tras dos años de obras</a></h3>
+                <p class="meta">
+                  <!-- ✏️ CAMBIA EL NOMBRE DEL AUTOR (deja la palabra "Por") -->
+                  <span>Por Lucía Condori</span>
+                  <!-- ✏️ CAMBIA CUÁNTO HACE QUE SE PUBLICÓ (ejemplo: Hace 3 horas) -->
+                  <span>Hace 6 horas</span>
+                  <!-- ✏️ CAMBIA EL TIEMPO DE LECTURA (ejemplo: Lectura de 3 min) -->
+                  <span>Lectura de 3 min</span>
+                </p>
+              </div>
+            </article>
+
+            <!-- 📰 NOTICIA 5 DE 6 -->
+            <article class="card">
+              <a class="ph r85" href="#" data-size="600 × 375" aria-label="Miniatura">
+                <!-- 🖼️ PEGA EL ENLACE DE TU FOTO DENTRO DE LAS COMILLAS DEL src="" -->
+                <!-- ✏️ Y en alt="" escribe en pocas palabras qué se ve en la foto -->
+                <img src="" alt="Describe aquí la foto" loading="lazy">
+              </a>
+              <div>
+                <!-- ✏️ CAMBIA LA CATEGORÍA EN LA SIGUIENTE LÍNEA -->
+                <a class="kicker" href="#">Reportajes</a>
+                <!-- ✏️ CAMBIA EL TITULAR DE ESTA NOTICIA EN LA SIGUIENTE LÍNEA -->
+                <!-- 🔗 PARA QUE ABRA TU NOTICIA, CAMBIA EL # DENTRO DE LAS COMILLAS DEL href="" POR SU ENLACE -->
+                <h3><a href="#">Reportaje especial: el regreso de los mercados de barrio en las ciudades medianas</a></h3>
+                <p class="meta">
+                  <!-- ✏️ CAMBIA EL NOMBRE DEL AUTOR (deja la palabra "Por") -->
+                  <span>Por Andrés Paredes</span>
+                  <!-- ✏️ CAMBIA CUÁNTO HACE QUE SE PUBLICÓ (ejemplo: Hace 3 horas) -->
+                  <span>Hace 7 horas</span>
+                  <!-- ✏️ CAMBIA EL TIEMPO DE LECTURA (ejemplo: Lectura de 3 min) -->
+                  <span>Lectura de 6 min</span>
+                </p>
+              </div>
+            </article>
+
+            <!-- 📰 NOTICIA 6 DE 6 -->
+            <article class="card">
+              <a class="ph r85" href="#" data-size="600 × 375" aria-label="Miniatura">
+                <!-- 🖼️ PEGA EL ENLACE DE TU FOTO DENTRO DE LAS COMILLAS DEL src="" -->
+                <!-- ✏️ Y en alt="" escribe en pocas palabras qué se ve en la foto -->
+                <img src="" alt="Describe aquí la foto" loading="lazy">
+                <!-- ✏️ CAMBIA LA PALABRA DE LA ETIQUETA SOBRE LA FOTO (Exclusivo, En vivo u Opinión) -->
+                <span class="badge op">Opinión</span>
+              </a>
+              <div>
+                <!-- ✏️ CAMBIA LA CATEGORÍA EN LA SIGUIENTE LÍNEA -->
+                <a class="kicker" href="#">Opinión</a>
+                <!-- ✏️ CAMBIA EL TITULAR DE ESTA NOTICIA EN LA SIGUIENTE LÍNEA -->
+                <!-- 🔗 PARA QUE ABRA TU NOTICIA, CAMBIA EL # DENTRO DE LAS COMILLAS DEL href="" POR SU ENLACE -->
+                <h3><a href="#">Editorial: cómo cerrar la brecha digital en la educación</a></h3>
+                <p class="meta">
+                  <!-- ✏️ CAMBIA EL NOMBRE DEL AUTOR (deja la palabra "Por") -->
+                  <span>Por Mariana Torres</span>
+                  <!-- ✏️ CAMBIA CUÁNTO HACE QUE SE PUBLICÓ (ejemplo: Hace 3 horas) -->
+                  <span>Hace 8 horas</span>
+                  <!-- ✏️ CAMBIA EL TIEMPO DE LECTURA (ejemplo: Lectura de 3 min) -->
+                  <span>Lectura de 4 min</span>
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+        <!-- ======== 📍 FIN: MÁS NOTICIAS ======== -->
+
+        <!-- ======== 📍 INICIO: BARRA LATERAL (Último minuto, boletín y Lo más leído) ======== -->
+        <aside aria-label="Barra lateral">
+          <section aria-labelledby="t-flash">
+            <!-- ✏️ CAMBIA EL TÍTULO DE ESTA LISTA EN LA SIGUIENTE LÍNEA -->
+            <h2 class="sec-title" id="t-flash">Último minuto</h2>
+            <ul class="flash">
+              <li>
+                <!-- ✏️ CAMBIA LA HORA EN LA SIGUIENTE LÍNEA -->
+                <time>10:42</time>
+                <!-- ✏️ CAMBIA EL TITULAR EN LA SIGUIENTE LÍNEA -->
+                <!-- 🔗 PARA QUE ABRA TU NOTICIA, CAMBIA EL # DENTRO DE LAS COMILLAS DEL href="" POR SU ENLACE -->
+                <a href="#">Fuertes lluvias complican el tránsito en tres distritos de la ciudad</a>
+              </li>
+              <li>
+                <!-- ✏️ CAMBIA LA HORA EN LA SIGUIENTE LÍNEA -->
+                <time>10:15</time>
+                <!-- ✏️ CAMBIA EL TITULAR EN LA SIGUIENTE LÍNEA -->
+                <!-- 🔗 PARA QUE ABRA TU NOTICIA, CAMBIA EL # DENTRO DE LAS COMILLAS DEL href="" POR SU ENLACE -->
+                <a href="#">Presentan el informe final del plan de obras en las calles de la ciudad</a>
+              </li>
+              <li>
+                <!-- ✏️ CAMBIA LA HORA EN LA SIGUIENTE LÍNEA -->
+                <time>09:58</time>
+                <!-- ✏️ CAMBIA EL TITULAR EN LA SIGUIENTE LÍNEA -->
+                <!-- 🔗 PARA QUE ABRA TU NOTICIA, CAMBIA EL # DENTRO DE LAS COMILLAS DEL href="" POR SU ENLACE -->
+                <a href="#">Universidad regional abre postulaciones para becas de posgrado</a>
+              </li>
+              <li>
+                <!-- ✏️ CAMBIA LA HORA EN LA SIGUIENTE LÍNEA -->
+                <time>09:31</time>
+                <!-- ✏️ CAMBIA EL TITULAR EN LA SIGUIENTE LÍNEA -->
+                <!-- 🔗 PARA QUE ABRA TU NOTICIA, CAMBIA EL # DENTRO DE LAS COMILLAS DEL href="" POR SU ENLACE -->
+                <a href="#">El dólar abre estable al inicio de la jornada</a>
+              </li>
+              <li>
+                <!-- ✏️ CAMBIA LA HORA EN LA SIGUIENTE LÍNEA -->
+                <time>09:05</time>
+                <!-- ✏️ CAMBIA EL TITULAR EN LA SIGUIENTE LÍNEA -->
+                <!-- 🔗 PARA QUE ABRA TU NOTICIA, CAMBIA EL # DENTRO DE LAS COMILLAS DEL href="" POR SU ENLACE -->
+                <a href="#">Festival de cine independiente anuncia toda su programación</a>
+              </li>
+              <li>
+                <!-- ✏️ CAMBIA LA HORA EN LA SIGUIENTE LÍNEA -->
+                <time>08:47</time>
+                <!-- ✏️ CAMBIA EL TITULAR EN LA SIGUIENTE LÍNEA -->
+                <!-- 🔗 PARA QUE ABRA TU NOTICIA, CAMBIA EL # DENTRO DE LAS COMILLAS DEL href="" POR SU ENLACE -->
+                <a href="#">Equipo local clasifica a la final del torneo regional</a>
+              </li>
+            </ul>
+          </section>
+
+          <section class="news" aria-labelledby="t-news">
+            <!-- ✏️ CAMBIA EL TÍTULO DEL BOLETÍN EN LA SIGUIENTE LÍNEA -->
+            <h2 id="t-news">Recibe las noticias del día en tu correo</h2>
+            <!-- ✏️ CAMBIA EL TEXTO DE INVITACIÓN EN LA SIGUIENTE LÍNEA -->
+            <p>Cada mañana te enviamos un resumen con lo más importante. Es gratis y puedes darte de baja cuando quieras.</p>
+            <!-- 🛑 NO TOCAR: formulario del boletín (solo puedes cambiar el texto del botón) -->
+            <form id="form-boletin">
+              <input type="email" name="correo" placeholder="Tu correo electrónico" aria-label="Tu correo electrónico" autocomplete="email" required>
+              <!-- ✏️ CAMBIA EL TEXTO DEL BOTÓN EN LA SIGUIENTE LÍNEA -->
+              <button type="submit">Quiero suscribirme</button>
+            </form>
+            <!-- ✏️ CAMBIA EL MENSAJE QUE VE QUIEN SE SUSCRIBE EN LA SIGUIENTE LÍNEA -->
+            <p class="ok" id="boletin-ok" role="status" hidden>¡Listo! Ya estás en la lista. Revisa tu correo para confirmar.</p>
+            <!-- ✏️ CAMBIA EL TEXTO PEQUEÑO EN LA SIGUIENTE LÍNEA -->
+            <small>No compartimos tu correo con nadie.</small>
+          </section>
+
+          <section aria-labelledby="t-top">
+            <!-- ✏️ CAMBIA EL TÍTULO DE ESTA LISTA EN LA SIGUIENTE LÍNEA -->
+            <h2 class="sec-title" id="t-top">Lo más leído</h2>
+            <ol class="top">
+              <li>
+                <!-- ✏️ CAMBIA EL TITULAR EN LA SIGUIENTE LÍNEA -->
+                <!-- 🔗 PARA QUE ABRA TU NOTICIA, CAMBIA EL # DENTRO DE LAS COMILLAS DEL href="" POR SU ENLACE -->
+                <a href="#">Cinco claves para entender el nuevo reglamento de transporte urbano</a>
+              </li>
+              <li>
+                <!-- ✏️ CAMBIA EL TITULAR EN LA SIGUIENTE LÍNEA -->
+                <!-- 🔗 PARA QUE ABRA TU NOTICIA, CAMBIA EL # DENTRO DE LAS COMILLAS DEL href="" POR SU ENLACE -->
+                <a href="#">Cómo preparar a tu familia para la temporada de lluvias</a>
+              </li>
+              <li>
+                <!-- ✏️ CAMBIA EL TITULAR EN LA SIGUIENTE LÍNEA -->
+                <!-- 🔗 PARA QUE ABRA TU NOTICIA, CAMBIA EL # DENTRO DE LAS COMILLAS DEL href="" POR SU ENLACE -->
+                <a href="#">Los cultivos andinos ganan terreno en el mercado internacional</a>
+              </li>
+              <li>
+                <!-- ✏️ CAMBIA EL TITULAR EN LA SIGUIENTE LÍNEA -->
+                <!-- 🔗 PARA QUE ABRA TU NOTICIA, CAMBIA EL # DENTRO DE LAS COMILLAS DEL href="" POR SU ENLACE -->
+                <a href="#">Entrevista: la historiadora que rescata los oficios tradicionales</a>
+              </li>
+              <li>
+                <!-- ✏️ CAMBIA EL TITULAR EN LA SIGUIENTE LÍNEA -->
+                <!-- 🔗 PARA QUE ABRA TU NOTICIA, CAMBIA EL # DENTRO DE LAS COMILLAS DEL href="" POR SU ENLACE -->
+                <a href="#">Guía práctica para declarar impuestos sin errores</a>
+              </li>
+            </ol>
+          </section>
+        </aside>
+        <!-- ======== 📍 FIN: BARRA LATERAL ======== -->
+
+      </div>
+    </main>
+
+    <!-- ======== 📍 INICIO: PIE DE PÁGINA (FOOTER): descripción, enlaces legales y redes ======== -->
+    <footer>
+      <div class="wrap foot-grid">
+        <div>
+          <div class="ph foot-logo" data-size="LOGO 180 × 48">
+            <!-- 🖼️ PEGA EL ENLACE DE TU LOGO DENTRO DE LAS COMILLAS DEL src="" -->
+            <!-- ✏️ Y en alt="" escribe el nombre de tu portal -->
+            <img src="" alt="Nombre del Portal">
+          </div>
+          <!-- ✏️ CAMBIA LA DESCRIPCIÓN DE TU PORTAL EN LA SIGUIENTE LÍNEA -->
+          <p>Noticias, análisis y reportajes de todas las regiones del país. Texto de ejemplo para la descripción del portal.</p>
+        </div>
+        <nav aria-labelledby="t-legal">
+          <!-- ✏️ CAMBIA EL TÍTULO DE ESTA COLUMNA EN LA SIGUIENTE LÍNEA -->
+          <h2 id="t-legal">Información legal</h2>
+          <ul>
+            <li>
+              <!-- ✏️ CAMBIA EL TEXTO DEL ENLACE Y 🔗 PEGA SU DIRECCIÓN DENTRO DE LAS COMILLAS DEL href="" -->
+              <a href="#">Términos y condiciones</a>
+            </li>
+            <li>
+              <!-- ✏️ CAMBIA EL TEXTO DEL ENLACE Y 🔗 PEGA SU DIRECCIÓN DENTRO DE LAS COMILLAS DEL href="" -->
+              <a href="#">Política de privacidad</a>
+            </li>
+            <li>
+              <!-- ✏️ CAMBIA EL TEXTO DEL ENLACE Y 🔗 PEGA SU DIRECCIÓN DENTRO DE LAS COMILLAS DEL href="" -->
+              <a href="#">Política de cookies</a>
+            </li>
+            <li>
+              <!-- ✏️ CAMBIA EL TEXTO DEL ENLACE Y 🔗 PEGA SU DIRECCIÓN DENTRO DE LAS COMILLAS DEL href="" -->
+              <a href="#">Libro de reclamaciones</a>
+            </li>
+            <li>
+              <!-- ✏️ CAMBIA EL TEXTO DEL ENLACE Y 🔗 PEGA SU DIRECCIÓN DENTRO DE LAS COMILLAS DEL href="" -->
+              <a href="#">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+        <div>
+          <!-- ✏️ CAMBIA EL TÍTULO DE ESTA COLUMNA EN LA SIGUIENTE LÍNEA -->
+          <h2>Síguenos</h2>
+          <div class="social">
+            <!-- ✏️ CAMBIA EL NOMBRE DE LA RED Y 🔗 PEGA TU PERFIL DENTRO DE LAS COMILLAS DEL href="" -->
+            <a href="#">Facebook</a>
+            <!-- ✏️ CAMBIA EL NOMBRE DE LA RED Y 🔗 PEGA TU PERFIL DENTRO DE LAS COMILLAS DEL href="" -->
+            <a href="#">X</a>
+            <!-- ✏️ CAMBIA EL NOMBRE DE LA RED Y 🔗 PEGA TU PERFIL DENTRO DE LAS COMILLAS DEL href="" -->
+            <a href="#">Instagram</a>
+            <!-- ✏️ CAMBIA EL NOMBRE DE LA RED Y 🔗 PEGA TU PERFIL DENTRO DE LAS COMILLAS DEL href="" -->
+            <a href="#">YouTube</a>
+            <!-- ✏️ CAMBIA EL NOMBRE DE LA RED Y 🔗 PEGA TU PERFIL DENTRO DE LAS COMILLAS DEL href="" -->
+            <a href="#">TikTok</a>
+          </div>
+        </div>
+      </div>
+      <div class="copy">
+        <div class="wrap">
+          <p>
+            ©
+            <!-- 🛑 EL AÑO SE PONE SOLO: NO LO CAMBIES -->
+            <span id="anio">2026</span>
+            <!-- ✏️ CAMBIA EL NOMBRE DE TU PORTAL EN LA SIGUIENTE LÍNEA -->
+            Nombre del Portal. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- ======== 📍 FIN: PIE DE PÁGINA (FOOTER) ======== -->
+
+    <!-- 🛑 NO TOCAR: botón flotante "Ir arriba" -->
+    <button class="arriba" id="btn-arriba" aria-label="Volver arriba">
+      <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
+
+    <!-- 🟢 FIN DE LA ZONA SEGURA: DESDE AQUÍ NO ESCRIBAS MÁS 🟢 -->
+
+    <!-- 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 -->
+    <!-- 🛑 ZONA DE SISTEMA (CSS/JS) - NO TOCAR O LA PÁGINA SE ROMPERÁ 🛑 -->
+    <!-- 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 -->
+    <script>
+      (function(){
+        var $ = function(s){ return document.querySelector(s); };
+        var root = document.documentElement;
+
+        // Fecha del día (dinámica)
+        var hoy = new Date();
+        var txt = hoy.toLocaleDateString('es-PE', { weekday:'long', day:'numeric', month:'long', year:'numeric' });
+        var f = $('#fecha');
+        f.textContent = txt.charAt(0).toUpperCase() + txt.slice(1);
+        f.setAttribute('datetime', hoy.toISOString().slice(0,10));
+        $('#anio').textContent = hoy.getFullYear();
+
+        // Modo claro / oscuro
+        var btnTema = $('#btn-tema');
+        function aplicar(t){
+          root.dataset.theme = t;
+          btnTema.setAttribute('aria-label', t === 'dark' ? 'Activar modo claro' : 'Activar modo oscuro');
+        }
+        aplicar(root.dataset.theme || 'light');
+        btnTema.addEventListener('click', function(){
+          var t = root.dataset.theme === 'dark' ? 'light' : 'dark';
+          aplicar(t);
+          try { localStorage.setItem('tema', t); } catch(e) {}
+        });
+
+        // Menú de secciones en móvil
+        var nav = $('#nav'), btnMenu = $('#btn-menu');
+        btnMenu.addEventListener('click', function(){
+          btnMenu.setAttribute('aria-expanded', nav.classList.toggle('open'));
+        });
+        $('#menu').addEventListener('click', function(e){
+          if (e.target.closest('a')) { nav.classList.remove('open'); btnMenu.setAttribute('aria-expanded', 'false'); }
+        });
+
+        // Barra de progreso de lectura y botón "Ir arriba"
+        var barra = $('#progreso'), subir = $('#btn-arriba'), pendiente = false;
+        function alDesplazar(){
+          var max = document.documentElement.scrollHeight - window.innerHeight;
+          var y = window.scrollY;
+          barra.style.transform = 'scaleX(' + (max > 0 ? Math.min(y / max, 1) : 0) + ')';
+          subir.classList.toggle('ver', y > 400);
+          pendiente = false;
+        }
+        window.addEventListener('scroll', function(){
+          if (!pendiente) { pendiente = true; requestAnimationFrame(alDesplazar); }
+        }, { passive:true });
+        window.addEventListener('resize', alDesplazar);
+        alDesplazar();
+        subir.addEventListener('click', function(){
+          var suave = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+          window.scrollTo({ top:0, behavior: suave ? 'smooth' : 'auto' });
+        });
+
+        // Boletín
+        $('#form-boletin').addEventListener('submit', function(e){
+          e.preventDefault(); /* conecta aquí tu servicio de correo */
+          this.hidden = true; $('#boletin-ok').hidden = false;
+        });
+
+        // Búsqueda
+        var btnSearch = $('#btn-search'), form = $('#search');
+        btnSearch.addEventListener('click', function(){
+          var oculto = form.hasAttribute('hidden');
+          if (oculto) { form.removeAttribute('hidden'); form.q.focus(); }
+          else { form.setAttribute('hidden', ''); }
+          btnSearch.setAttribute('aria-expanded', oculto);
+        });
+        form.addEventListener('submit', function(e){ e.preventDefault(); /* conecta aquí tu buscador */ });
+      })();
+    </script>
+    <!-- 🛑 FIN DE LA ZONA DE SISTEMA 🛑 -->
+  </body>
+</html>
