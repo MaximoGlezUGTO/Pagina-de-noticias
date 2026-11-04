@@ -1,1 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Copiado del index: No tocar -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gestión de botiquines y protocolo de emergencia | Nombre del Portal</title>
+    <meta name="theme-color" content="#c4122f">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+      (function(){var t;try{t=localStorage.getItem('tema')}catch(e){}
+      if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+      document.documentElement.dataset.theme=t})();
+    </script>
+    <style>
+      :root{color-scheme:light;--accent:#c4122f;--amber:#f5b82e;--ink:#1c2127;--muted:#5b6570;--bg:#fff;--rule:#d9dde2;--bar-bg:#1c2127;--on-accent:#fff;--ph:#d3d6da;--ph-ink:#79828c;--serif:"Merriweather",Georgia,serif;--sans:"Inter",sans-serif;}
+      [data-theme="dark"]{color-scheme:dark;--accent:#ff6b81;--on-accent:#13171b;--ink:#eceff2;--muted:#9ba5b0;--bg:#13171b;--rule:#2f363e;--bar-bg:#0a0d10;--ph:#2a3037;--ph-ink:#8993a0;}
+      *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+      body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-text-size-adjust:100%}
+      a{color:inherit;text-decoration:none}
+      a:hover{color:var(--accent)}
+      .topbar{background:var(--bar-bg);padding:1rem}
+      .wrap{max-width:800px;margin:2rem auto;padding:0 1rem;font-family:var(--serif);line-height:1.8}
+      h1{font-family:var(--sans);font-size:2.2rem;line-height:1.2;margin-bottom:1rem}
+      h2{font-family:var(--sans);font-size:1.5rem;margin:1.5rem 0 1rem}
+      .meta{color:var(--muted);font-family:var(--sans);font-size:.9rem;border-bottom:1px solid var(--rule);padding-bottom:1rem;margin-bottom:2rem}
+      .ph{position:relative;display:block;background:var(--ph);color:var(--ph-ink);aspect-ratio:16/9;margin-bottom:2rem;text-align:center}
+      .ph img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+      p{margin-bottom:1.5rem}
+    </style>
+</head>
+<body>
+    <header class="topbar">
+        <div style="max-width:800px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;">
+            <a href="index.html" style="color:var(--white);font-weight:700;">⬅ Volver a Portada</a>
+        </div>
+    </header>
 
+    <main class="wrap">
+        <!-- 🟢 ZONA SEGURA: NOTICIA DE MILITA -->
+        <!-- ✏️ TÍTULO DEL REPORTAJE -->
+        <h1>Gestión de botiquines y protocolo de emergencia</h1>
+        
+        <!-- ✏️ DATOS DEL AUTOR -->
+        <div class="meta">
+            Por <strong>Valeria Quispe Mendoza</strong> | Publicado hace 2 horas
+        </div>
+
+        <!-- 🖼️ IMAGEN PRINCIPAL (Reemplaza el src) -->
+        <div class="ph">
+            <img src="" alt="Estudiantes en bicicleta">
+        </div>
+
+        <!-- ✏️ PÁRRAFOS DEL REPORTAJE -->
+        <p>La escuela aclaró que la compra de botiquines no se gestiona de forma directa, sino a través del área administrativa de la facultad debido a limitaciones presupuestales. Por normativa de la universidad, está prohibido que alumnos o docentes actúen como paramédicos o entreguen medicamentos sin prescripción.</p>
+
+        <h2>¿Qué hacer ante una emergencia?</h2>
+
+        <p><strong>Revisa la pizarra:</strong> Ubica a la derecha los números telefónicos de emergencia (Conserjería, Departamento Médico y Bomberos) para reportar cualquier descompensación.</p>
+
+        <p><strong>No automediques:</strong> No des pastillas a tus compañeros. Solo utiliza gasas y apósitos limpios para presionar heridas que sangren.</p>
+
+        <p><strong>Reporta los vacíos:</strong> Si el botiquín de tu salón está vacío, avísale a tu delegado de aula en las reuniones mensuales para exigir su reposición inmediata a la dirección.</p>
+
+        <!-- 🟢 ZONA SEGURA: BOTÓN DE COMPARTIR -->
+        <button id="btn-compartir" style="padding:10px 20px;background:var(--accent);color:var(--on-accent);border:none;border-radius:8px;cursor:pointer;font-family:'Inter',sans-serif;font-weight:600;margin-top:20px;">
+            Compartir reportaje
+        </button>
+        <!-- 🟢 FIN DE LA ZONA SEGURA -->
+    </main>
+    
+    <script>
+        document.getElementById('btn-compartir').addEventListener('click', async () => {
+            if (navigator.share) {
+                await navigator.share({ title: document.title, url: window.location.href });
+            } else {
+                navigator.clipboard.writeText(window.location.href);
+                alert("¡Enlace copiado al portapapeles!");
+            }
+        });
+    </script>
+</body>
+</html>
