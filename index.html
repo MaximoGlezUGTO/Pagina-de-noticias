@@ -77,6 +77,25 @@
     </script>
 
     <style>
+       /* 🛑 ZONA DE SISTEMA: ESTILOS DE VIDEO */
+.video-ratio-16-9 {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporción 16:9 perfecta */
+    height: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 2rem 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.video-ratio-16-9 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
       /* ==========================================================================
          🎨 COLORES DE LA PÁGINA
          ⚠️ Solo puedes cambiar el código hexadecimal (ejemplo: #c4122f).
@@ -279,6 +298,30 @@
       .copy{border-top:1px solid var(--line-dark);padding-block:1.25rem;font-size:.8rem}
       @media (min-width:700px){.foot-grid{grid-template-columns:2fr 1fr 1fr}}
     </style>
+     <!-- 🛑 ZONA DE SISTEMA: SCRIPT DE VIDEO -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const contenedoresVideo = document.querySelectorAll('.reproductor-video');
+    
+    contenedoresVideo.forEach(contenedor => {
+        const url = contenedor.getAttribute('data-url');
+        if (url && url.includes('youtu')) {
+            // Fórmula para extraer el ID del video de cualquier link de YouTube
+            const regex = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+            const coincidencia = url.match(regex);
+            
+            if (coincidencia && coincidencia[2].length === 11) {
+                const videoId = coincidencia[2];
+                contenedor.innerHTML = `
+                    <div class="video-ratio-16-9">
+                        <iframe src="https://www.youtube.com/embed/${videoId}" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                    </div>
+                `;
+            }
+        }
+    });
+});
+</script>
     <!-- 🛑 FIN DE LA ZONA DE SISTEMA 🛑 -->
   </head>
 
@@ -748,12 +791,48 @@
     <button class="arriba" id="btn-arriba" aria-label="Volver arriba">
       <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
     </button>
+<!-- 🟢 ZONA SEGURA: BOTÓN DE COMPARTIR -->
+<!-- 🔗 Solo pega esto donde quieras que aparezca el botón al final de tu texto -->
+<button id="btn-compartir" style="padding: 10px 20px; background: var(--accent); color: var(--on-accent); border: none; border-radius: 8px; cursor: pointer; font-family: 'Inter', sans-serif; font-weight: 600; margin-top: 20px;">
+    Compartir reportaje
+</button>
+     <p>✏️ La UNSA anunció hoy nuevos talleres para los estudiantes de periodismo...</p>
 
+<!-- 🟢 ZONA SEGURA: VIDEO DEL REPORTAJE -->
+<!-- 🎥 Reemplaza el enlace dentro de las comillas por tu link de YouTube -->
+<div class="reproductor-video" data-url="https://www.youtube.com/watch?v=tu_video_aqui"></div>
+<!-- 🟢 FIN ZONA SEGURA -->
+
+<p>✏️ Como se observa en el reportaje, los alumnos mostraron gran entusiasmo...</p>
     <!-- 🟢 FIN DE LA ZONA SEGURA: DESDE AQUÍ NO ESCRIBAS MÁS 🟢 -->
 
     <!-- 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 -->
     <!-- 🛑 ZONA DE SISTEMA (CSS/JS) - NO TOCAR O LA PÁGINA SE ROMPERÁ 🛑 -->
     <!-- 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 -->
+     <!-- 🛑 ZONA DE SISTEMA: SCRIPT BOTÓN DE COMPARTIR -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const btnCompartir = document.getElementById('btn-compartir');
+    if (btnCompartir) {
+        btnCompartir.addEventListener('click', async () => {
+            try {
+                if (navigator.share) {
+                    await navigator.share({
+                        title: document.title,
+                        text: "Mira este reportaje:",
+                        url: window.location.href
+                    });
+                } else {
+                    navigator.clipboard.writeText(window.location.href);
+                    alert("¡Enlace copiado al portapapeles!");
+                }
+            } catch (err) {
+                console.error("Error al compartir:", err);
+            }
+        });
+    }
+});
+</script>
     <script>
       (function(){
         var $ = function(s){ return document.querySelector(s); };
