@@ -446,10 +446,20 @@ document.addEventListener("DOMContentLoaded", () => {
                   <span>Lectura de 10 min</span>
                 </p>
 
-                <!-- 🟢 ZONA SEGURA: BOTÓN DE FORMATO IMPRESO (PDF) -->
-                <a href="tu-archivo.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 15px; padding: 10px 20px; background: var(--accent); color: var(--on-accent); text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 0.95rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                  📄 Ver formato impreso
-                </a>
+               <!-- 🟢 ZONA SEGURA: BOTONES DE FORMATO IMPRESO Y MULTIMEDIA -->
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 15px;">
+              
+              <!-- Botón 1: PDF -->
+              <a href="tu-archivo.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: var(--accent); color: var(--on-accent); text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 0.95rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                📄 Ver formato impreso
+              </a>
+              
+              <!-- Botón 2: Entrevistas -->
+              <a href="videos.html" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: var(--bar-bg); color: var(--on-dark); text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 0.95rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid var(--rule);">
+                ▶️ Entrevistas realizadas
+              </a>
+              
+            </div>
 
               </div>
 
