@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrevistas realizadas | Milagros News</title>
+    <!-- Fuentes de la página principal -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Script para mantener el modo oscuro/claro de tu portal -->
+    <script>
+      (function(){var t;try{t=localStorage.getItem('tema')}catch(e){}
+      if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+      document.documentElement.dataset.theme=t})();
+    </script>
 
+    <style>
+        /* Variables de color adaptadas de tu Entrevista.html */
+        :root { --bg: #fff; --ink: #1c2127; --bar-bg: #1c2127; --white: #fff; --accent: #c4122f; --rule: #d9dde2; --sans: 'Inter', sans-serif; --serif: 'Merriweather', serif; }
+        [data-theme="dark"] { --bg: #13171b; --ink: #eceff2; --bar-bg: #0a0d10; --rule: #2f363e; }
+        
+        body { font-family: var(--sans); background: var(--bg); color: var(--ink); margin: 0; line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        
+        /* Barra superior de navegación */
+        .topbar { background: var(--bar-bg); padding: 1rem; }
+        .topbar-content { max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .topbar a { color: var(--white); font-weight: 700; transition: color 0.2s; }
+        .topbar a:hover { color: var(--accent); }
+        
+        /* Contenedor principal */
+        .container { max-width: 800px; margin: 2.5rem auto; padding: 0 1rem; }
+        h1 { font-family: var(--serif); font-size: 1.8rem; margin-bottom: 2rem; border-bottom: 1px solid var(--rule); padding-bottom: 1rem; }
+        
+        /* Cajas de video responsivas idénticas a tu imagen */
+        .video-box { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 12px; overflow: hidden; margin-bottom: 2.5rem; background: #000; box-shadow: 0 6px 20px rgba(0,0,0,0.25); }
+        .video-box iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+    </style>
+</head>
+<body>
+    <header class="topbar">
+        <div class="topbar-content">
+            <a href="index.html">← Volver a Portada</a>
+            <span style="color: var(--white); font-weight: 500; font-size: 0.9rem;">Multimedia</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Entrevistas realizadas</h1>
+
+        <!-- VIDEO 1: Entrevista UNSA -->
+        <div class="video-box">
+            <!-- ✏️ Cambia 'ID_DEL_VIDEO_1' por el código del video de YouTube -->
+            <iframe src="https://www.youtube.com/embed/ID_DEL_VIDEO_1" allowfullscreen></iframe>
+        </div>
+
+        <!-- VIDEO 2: Podcast Informativo -->
+        <div class="video-box">
+            <!-- ✏️ Cambia 'ID_DEL_VIDEO_2' por el código del video de YouTube -->
+            <iframe src="https://www.youtube.com/embed/ID_DEL_VIDEO_2" allowfullscreen></iframe>
+        </div>
+        
+    </main>
+</body>
+</html>
